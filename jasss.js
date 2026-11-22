@@ -96,24 +96,6 @@
             });
         });
 
-        // Enhanced parallax effect for hero background
-        let ticking = false;
-        
-        function updateParallax() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            const rate = scrolled * -0.3;
-            hero.style.transform = `translateY(${rate}px)`;
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
-        });
-
         // Add subtle hover effects to skill tags
         document.querySelectorAll('.skill-tag').forEach(tag => {
             tag.addEventListener('mouseenter', () => {
